@@ -1,0 +1,76 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.be-portfolio: DEBUG
+    org.hibernate.SQL: DEBUG
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/portfoliodb
+    username: user
+    password: pwd
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none # Prevent Hibernate from managing the schema
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
+services:
+  fe-portfolio:
+    image: fe-portfolio
+    container_name: fe-portfolio
+    build:
+      context: fe-portfolio
+      dockerfile: Dockerfile
+      args:
+        - BUILD_MODE=development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./fe-portfolio/src:/app/src
+
+  be-portfolio:
+    image: openjdk:17
+    hostname: be-portfolio
+    build:
+      context: be-portfolio
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pwd
+      - POSTGRES_DB=portfoliodb
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "9003:80"
+    depends_on:
+      - postgres
