@@ -1,0 +1,35 @@
+/* Navbar styling */
+.navbar {
+    background-color: #1e1e1e !important; /* Dark navbar background */
+    border-bottom: 1px solid #ffd700; /* Gold border */
+}
+
+.nav-link {
+    color: #f5deb3 !important; /* Soft gold links */
+}
+
+.nav-link:hover {
+    color: #ffd700 !important; /* Bright gold on hover */
+}
+
+.navbar .btn-outline-warning {
+    color: #ffd700; /* Gold text */
+    border-color: #ffd700; /* Gold border */
+}
+
+.navbar .btn-outline-warning:hover {
+    color: #121212; /* Black text */
+    background-color: #ffd700; /* Gold background */
+    border-color: #ffd700; /* Gold border */
+}
+
+.login-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}

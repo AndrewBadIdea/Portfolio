@@ -1,0 +1,68 @@
+.projects-container {
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #121212; /* Dark background for contrast */
+    border: 1px solid #ffd700; /* Gold border for better visibility */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    color: #f5deb3; /* Soft gold text */
+}
+
+.project-card .btn {
+    margin-top: 10px;
+    background-color: #ffd700; /* Gold button */
+    color: #121212; /* Dark text for contrast */
+    border: none;
+    font-weight: bold;
+}
+
+.project-card .btn:hover {
+    background-color: #ffcc00; /* Brighter gold on hover */
+    color: #000;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.modal-container {
+    background-color: #1e1e1e; /* Dark background */
+    color: #f5deb3; /* Soft gold text */
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+    text-align: center;
+}
+
+.modal-container h2 {
+    margin-bottom: 20px;
+    color: #ffd700; /* Bright gold header */
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-actions .btn {
+    width: 48%; /* Make buttons equal width */
+}
+
+.modal-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}

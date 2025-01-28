@@ -1,0 +1,94 @@
+.about-me {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5deb3; /* Soft gold text */
+    text-align: center;
+}
+
+.carousel-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Add some shadow for depth */
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ensure content fills the carousel item */
+}
+
+.carousel-content h2 {
+    color: #ffd700; /* Bright gold for headings */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.carousel-content p {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-content img {
+    width: 100%;
+    max-width: 500px; /* Set a consistent max width for all images */
+    height: 300px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensure the image fills the space proportionally */
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 400px; /* Ensure all carousel items are the same size */
+    flex-direction: column;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffd700; /* Gold background for controls */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5)); /* Add depth to controls */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #ffd700; /* Gold indicators */
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-indicators .active {
+    background-color: #f5deb3; /* Slightly lighter gold for the active indicator */
+}
+
+.btn-gold {
+    background-color: #121212; /* Black button */
+    color: #ffd700; /* Gold text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #ffd700; /* Gold border */
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-gold:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    color: #121212; /* Black text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

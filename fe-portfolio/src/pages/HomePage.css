@@ -1,0 +1,42 @@
+.homepage {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f5deb3; /* Soft gold text */
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Add some shadow for depth */
+}
+
+h1 {
+    color: #ffd700; /* Bright gold for the header */
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-gold {
+    background-color: #121212; /* Black button */
+    color: #ffd700; /* Gold text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #ffd700; /* Gold border */
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #ffd700; /* Gold background on hover */
+    color: #121212; /* Black text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
